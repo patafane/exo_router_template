@@ -10,7 +10,7 @@ function App() {
       element:<Home/>
     },
     {
-      path:"/destination",
+      path:"/destination/:id",
       element:<Destination/>,
     }
   ])

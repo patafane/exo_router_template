@@ -8,11 +8,10 @@ let Navbar =()=>{
                 <img src={logo} alt="" />
             </div>
             <div className="bar">
-
             </div>
             <div className="blurNav">
                 <Link to="/">00 HOME</Link>
-                <Link to="/destination">01 DESTINATION</Link>
+                <Link to="/destination/0">01 DESTINATION</Link>
                 <Link>02 CREW</Link>
                 <Link>03 TECHNOLOGY</Link>
             </div>
