@@ -13,7 +13,7 @@ let Navbar =()=>{
                 <Link to="/">00 HOME</Link>
                 <Link to="/destination/0">01 DESTINATION</Link>
                 <Link to="/crew">02 CREW</Link>
-                <Link>03 TECHNOLOGY</Link>
+                <Link to="/technology">03 TECHNOLOGY</Link>
             </div>
         </nav>
     )
