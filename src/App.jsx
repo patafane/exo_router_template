@@ -2,7 +2,6 @@ import './App.sass'
 import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 import Home from './Components/Home/Home'
 import Destination from './Components/Destination/Destination'
-import { useState } from 'react'
 import Crew from './Components/Crew/Crew'
 import Technology from './Components/Technology/Technology'
 

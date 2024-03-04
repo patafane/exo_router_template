@@ -1,10 +1,14 @@
 import Navbar from "../Navbar/Navbar"
 import "./_Home.sass"
-
+import { useState,useEffect } from "react"
 let Home = ()=>{
+    const [homePage,setHomePage] = useState(false)
+    useEffect(()=>{
+        setHomePage(true)
+    },[])
     return(
         <div className="home">
-            <Navbar/>
+            <Navbar home={homePage}/>
             <div className="content">
                 <div className="leftPart">
                     <h1>

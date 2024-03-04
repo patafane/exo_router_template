@@ -1,12 +1,16 @@
 import Navbar from "../Navbar/Navbar"
 import "./_Crew.sass"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Data from "./../../data/data.json"
 let Crew = ()=>{
     const [elementActive,setElementActive] = useState(0)
+    const [crewPage,setCrewPage] = useState(false)
+    useEffect(()=>{
+        setCrewPage(true)
+    },[])
     return(
         <div className="crew">
-            <Navbar/>
+            <Navbar crew={crewPage}/>
             <h1 className="titre"><span>02</span> MEET YOUR CREW</h1>
             <div className="content">
                 <div className="leftPart">
@@ -23,7 +27,7 @@ let Crew = ()=>{
                     </div>
                     <div className="selectors">
                         {Data.crew.map((element,index)=>(
-                                <div className="rond" key={index} onClick={()=>setElementActive(index)}>
+                                <div className={elementActive === index ? "rond active" : "rond"} key={index} onClick={()=>setElementActive(index)}>
                                 </div>   
                         ))}
                     </div>

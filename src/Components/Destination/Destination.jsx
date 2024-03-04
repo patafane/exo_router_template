@@ -3,11 +3,16 @@ import Data from "./../../data/data.json"
 import "./_Destination.sass"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
-let Destination = (props)=>{
+import { useState,useEffect } from "react"
+let Destination = ()=>{
+    const [destinationPage,setDestinationPage] = useState(false)
+    useEffect(()=>{
+        setDestinationPage(true)
+    },[])
     let indexParams = useParams()
     return(
         <div className="destination">
-            <Navbar/>
+            <Navbar destination={destinationPage}/>
             <h1 className="titre"><span>01</span> PICK YOUR DESTINATION</h1>
             <div className="content">
                 <div className="leftPart">
@@ -18,7 +23,7 @@ let Destination = (props)=>{
                 <div className="rightPart">
                     <div className="planetNav">
                         {Data.destinations.map((element,index)=>(
-                            <Link key={index} to={"/destination/"+index}>{element.name}</Link>
+                            <Link key={index} to={"/destination/"+index} className={index === parseInt(indexParams.id) ? "active" : ""}>{element.name}</Link>
                         ))}
                     </div>
                     <div className="name">
