@@ -16,7 +16,7 @@ let Destination = ()=>{
             <h1 className="titre"><span>01</span> PICK YOUR DESTINATION</h1>
             <div className="content">
                 <div className="leftPart">
-                    <div className="planet container">
+                    <div className="planetContainer">
                         <img src={Data.destinations[indexParams.id].images.png} alt="" />
                     </div>
                 </div>

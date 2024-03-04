@@ -9,6 +9,7 @@
         padding-inline: 12%
         margin-top: 300px
         align-items: center
+        flex-wrap: wrap
         .leftPart
             width: 50%
             h1
@@ -30,3 +31,23 @@
                 justify-content: center
                 align-items: center
                 border-radius: 50%
+@media (max-width: 1620px)
+    .home
+        background-image: url("./../../assets/home/background-home-mobile.jpg")
+        .content
+            flex-direction: column
+            gap: 50px
+            margin-top: 50px
+            .leftPart
+                width: 100%
+                h1
+                    span
+                        font-size: 2em
+                p
+                    width: 100%
+            .rightPart
+                width: 100%
+                padding-bottom: 100px
+                .explore
+                    width: 250px
+                    height: 250px
